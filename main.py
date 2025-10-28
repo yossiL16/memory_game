@@ -1,5 +1,5 @@
-from create.create import create_table_game
+from create.create import create_cards
 
-create_table_game()
+create_cards()
 
 

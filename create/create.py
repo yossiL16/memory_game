@@ -1,4 +1,5 @@
 import random
+from itertools import count
 
 
 def create_size_table():
@@ -17,26 +18,15 @@ def create_size_table():
 def create_cards():
     size_tuple = create_size_table()
     num1, num2 = size_tuple[0], size_tuple[1]
+
     cards = []
-    for i in range(num1 * num2 // 2):
-        cards.append(str(i + 1))
-        cards.append(str(i + 1))
-    return cards
+    counter = 1
 
-def create_table_game():
-    cards = create_cards()
-    for i in range(len(cards) // 2):
+    for i in range((num1 + num2) // 2):
         row = []
-        for j in range(len(cards) // 2):
-            colu = []
-
-
-
-
-
-
-
-
-
-
-
+        for j in range((num1 + num2) // 4):
+            row.append(str(counter))
+            row.append(str(counter))
+            counter += 1
+        cards.append(row)
+    return cards
