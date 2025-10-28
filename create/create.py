@@ -37,9 +37,9 @@ def create_cards():
         cards.append(row)
     return cards, num1, num2
 
-def nix_cards():
+def mix_cards():
     cards, num1, num2 = create_cards()
-    cards_mix = deepcopy(cards)
+    cards_to_print = deepcopy(cards)
 
     for i in range(1500):
         random_number_row_1 = random.randrange(0,num1)
@@ -48,6 +48,6 @@ def nix_cards():
         random_number_row_2 = random.randrange(0, num1)
         random_number_colu_2 = random.randrange(0, num2)
 
-        cards_mix[random_number_row_1][random_number_colu_1],cards_mix[random_number_row_2][random_number_colu_2] = cards_mix[random_number_row_2][random_number_colu_2],cards_mix[random_number_row_1][random_number_colu_1]
-        return cards, cards_mix
+        cards_to_print[random_number_row_1][random_number_colu_1],cards_to_print[random_number_row_2][random_number_colu_2] = cards_to_print[random_number_row_2][random_number_colu_2],cards_to_print[random_number_row_1][random_number_colu_1]
+    return cards_to_print, num1 ,num2
 

@@ -1,5 +1,5 @@
-from create.create import nix_cards
+from game.game import card_selection, Inverted_table
 
-nix_cards()
+card_selection()
 
 
