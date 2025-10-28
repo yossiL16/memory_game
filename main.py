@@ -1,5 +1,5 @@
-from game.game import card_selection, Inverted_table
+from game.game import card_selection
 
-card_selection()
+print(card_selection())
 
 
