@@ -1,5 +1,5 @@
-from create.create import create_cards
+from create.create import nix_cards
 
-create_cards()
+nix_cards()
 
 
